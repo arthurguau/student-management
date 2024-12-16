@@ -20,10 +20,6 @@ import com.funnygorilla.studentmanagement.controllers.api.Student;
 import com.funnygorilla.studentmanagement.controllers.api.StudentAPI;
 import com.funnygorilla.studentmanagement.controllers.api.StudentNumber;
 
-//import com.funnygorilla.studentmanagement.controllers.api.Student;
-//import com.funnygorilla.studentmanagement.controllers.api.StudentAPI;
-//import com.funnygorilla.studentmanagement.controllers.api.StudentNumber;
-
 import com.funnygorilla.studentmanagement.dto.StudentDTO;
 import com.funnygorilla.studentmanagement.services.StudentService;
 
