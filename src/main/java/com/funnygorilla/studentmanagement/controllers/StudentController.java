@@ -62,12 +62,13 @@ public class StudentController implements StudentAPI {
 	public ResponseEntity<Student> getStudentByID(@PathVariable(required=true) long id) {
 		
 		StudentDTO sdto = this.studentService.getStudentByID(id);
-		logger.debug(" --> " + " getStudentByID() " + sdto.toString());
-		
+				
 		if (sdto == null || sdto.getId() == null){
+			logger.debug(" --> " + "Student is null ");
 			return new ResponseEntity<> (HttpStatus.NOT_FOUND);
 		} 
 		
+		logger.debug(" --> " + " getStudentByID() " + sdto.toString());
 		Student s = Converter.fromStudentDTOToStudent(sdto);
 		
 		HttpHeaders headers = new HttpHeaders();

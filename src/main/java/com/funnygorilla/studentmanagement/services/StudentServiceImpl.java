@@ -45,7 +45,9 @@ public class StudentServiceImpl implements StudentService {
 	{  
 		logger.debug(" ---------------> getStudentByID() called in Service. ");
 		StudentDB studentDB = this.studentRepository.getStudentByID(id);
-		StudentDTO dto = Converter.fromStudentDBStudentDTO(studentDB);
+		StudentDTO dto = null;
+		if (null != studentDB)
+	        dto = Converter.fromStudentDBStudentDTO(studentDB);
 		return dto;
 	}  
 	
