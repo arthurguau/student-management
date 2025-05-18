@@ -22,19 +22,10 @@ services:
      # is executed as soon as container is up and running.  
      volumes:
        - "./db/init-student-mysql.sql:/docker-entrypoint-initdb.d/init-student-mysql.sql"
-       
-#  student-app:
-#    restart: on-failure
-#    build: ./
-#    expose: 
-#      - "8083"
-#    container_name: studentmanagement
-#    ports:
-#      - 8083:8083
-#    depends_on: 
-#      database:
-#        condition: service_healthy
-#    environment:
-#      SPRING_DATASOURCE_URL: jdbc:mysql://mysql-arthur:3306/studentmanagement
-#      SPRING_DATASOURCE_USERNAME: tester
-#      SPRING_DATASOURCE_PASSWORD: tester
+     networks: 
+       - funnygorilla-network  
+
+ 
+
+networks:
+  funnygorilla-network:
